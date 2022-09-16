@@ -27,7 +27,7 @@ const ThemeSection = () => {
                     <div className={classNames(styles.content)}>
                         평범한 일상에 특별함을 한방울 뿌린
                         <br />
-                        메모리레인만의 테마 속으로 스며드세요.gg
+                        메모리레인만의 테마 속으로 스며드세요.
                     </div>
                 </div>
                 <div className={styles.btnSurf}>
