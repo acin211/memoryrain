@@ -1,0 +1,136 @@
+/* Main section */
+.main{
+  width:100%;
+
+}
+
+.main .background{
+  width:100%;
+  height:100vh;
+
+  position:relative;
+}
+
+.main .background .whiteFilter{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(255, 255, 255, 0.3);
+}
+
+.main .background img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.main .text{
+  position:absolute;
+  top:50%;
+  left:50%;
+
+  width:max-content;
+  font-weight: 400;
+  color:#1e1e1e;
+
+  transform:translate(-50%, -50%);
+}
+
+.main .head{
+  text-align: center;
+  font-family: didot;
+  font-size:48px;
+
+  opacity:0;
+  visibility: hidden;
+}
+
+
+
+.main .subhead{
+  font-family:'Noto Sans KR', sans-serif;
+  font-size:22px;
+  letter-spacing:0.05em;
+
+  margin-bottom:15px;
+
+  opacity:0;
+  visibility: hidden;
+}
+
+.main .textWithLine{
+  display:flex;
+  align-items: center;
+  line-height:1.5;
+
+  overflow:hidden;
+}
+
+.main .scroll{
+  font-family:roboto;
+  font-weight:400;
+  font-size:14px;
+
+  position:absolute;
+  bottom:25px;
+  left:50%;
+
+  transform:Translate(-50%, 0);
+
+  opacity:0;
+  visibility: hidden;
+}
+
+.main .textWithLine.line1 .sideText,
+.main .textWithLine.line1 .sideLine{
+  position:relative;
+  left:3em;
+}
+
+.main .textWithLine.line2 .sideText,
+.main .textWithLine.line2 .sideLine{
+  position:relative;
+  right:3em;
+}
+
+.main .sideText{
+  opacity: 0;
+  visibility: hidden;
+
+  text-transform: uppercase;
+}
+
+.main .sideLine{
+  height:1px;
+  background:#1e1e1e;
+  
+  flex:1;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.main .sideLine:nth-child(1){
+  margin-right:15px;
+}
+.main .sideLine:nth-child(2){
+  margin-left:15px;
+}
+
+@media screen and (min-width:768px){
+  .main .head{
+    font-size:6.25vw;
+  } 
+
+  .main .subhead{
+    font-size:3.3vw;
+  }
+
+  .main .textWithLine{
+    font-size:1.7vw;
+  }
+}

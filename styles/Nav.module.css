@@ -1,0 +1,94 @@
+/* Side Nav */
+.sideNav{
+  position:fixed;
+  top:80px;
+  
+  width:100vw;
+  height:calc(100vh - 80px);
+
+  z-index:800;
+
+  opacity:0;
+  visibility: hidden;
+}
+
+.sideNav .dim{
+  position:absolute;
+  top:0;
+  left:0;
+  
+  width:100%;
+  height:100%;
+
+  background:rgba(0, 0, 0, 0.5);
+  opacity:0;
+}
+
+.sideNav .slide{
+  position:relative;
+  left:80px;
+  width:calc(100% - 80px);
+  height:100%;
+
+  background:#f7f7f7;
+  box-shadow:0px 2px 3px rgba(255, 255, 255, 0.25);
+}
+
+/* Navi section */
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+  
+    z-index:900;
+  
+    width:100%;
+    height:80px;
+  
+    backdrop-filter:blur(3px);
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+  
+  .nav .container{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+  }
+  
+  .nav .logo{
+    width:45px;
+    height:48px;
+  
+    background-image:url(/svg/logo.svg);
+    background-size:100%;
+  }
+  
+  .nav .hamburger{
+    position:relative;
+    height:30px;
+    width:45px;
+  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav .line{
+    width:48px;
+    height:1.5px;
+    background:#1e1e1e;
+  
+    display:block;
+    position:relative;
+
+    transform-origin: center;
+  }
+  
+  @media screen and (min-width:768px) {
+    .container{
+      width:90%;
+      margin:0 auto;
+    }
+  }

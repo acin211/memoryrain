@@ -1,0 +1,61 @@
+.footer{
+    margin-top:150px;
+
+    font-family: didot;
+    font-size:11px;
+    color:#1e1e1e;
+
+    margin-bottom:50px;
+}
+
+.grid{
+    display:flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    
+}
+
+.gridItem{
+    margin-left:4vw;
+}
+
+.gridItem:nth-child(1){
+    margin-left:0;
+}
+
+.gridTitle{
+    display:flex;
+    align-items:center;
+}
+
+.ico{
+    display:inline-block;
+    font-size:inherit;
+
+    width:1em;
+    height:1em;
+
+    margin-right:0.3em;
+
+    background-size:100%;
+}
+
+.telIco{
+    background-image:url(/svg/tel.svg);
+
+}
+
+.emailIco{
+    background-image:url(/svg/email.svg);
+}
+
+@media screen and (min-width:768px) {
+    .footer{
+        width:90%;
+        margin:150px auto 50px;
+    }
+
+    .grid{
+        justify-content: flex-end;
+    }
+}
