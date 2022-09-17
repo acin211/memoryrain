@@ -79,7 +79,7 @@ const MainSection = () => {
                 </div>
                 <div className={classNames(styles.textWithLine, "text-with-line", styles.line2)}>
                     <div className={classNames(styles.sideLine, "side-line")}></div>
-                    <div className={classNames(styles.sideText, "side-text")}>Busan Outdoor Mission Game</div>
+                    <div className={classNames(styles.sideText, "side-text")}>Busan Outscape Games</div>
                 </div>
             </div>
             <div className={classNames(styles.scroll, "scroll")}>SCROLL</div>
