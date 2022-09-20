@@ -7,14 +7,14 @@ import "swiper/css/navigation";
 import "swiper/css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import Link from "next/link";
 import theme from "../../data/theme";
 
 const ThemeSection = () => {
     return (
         <section className={styles.container}>
-            <Swiper className={classNames(styles.mySwiper, "home-swiper")} modules={[Pagination, Navigation]} navigation={true} pagination={{ clickable: true }} slidesPerView={1} spaceBetween={25}>
+            <Swiper className={classNames(styles.mySwiper, "home-swiper")} modules={[Autoplay, Pagination, Navigation]} navigation={true} pagination={{ clickable: true }} slidesPerView={1} spaceBetween={25} autoplay>
                 {theme.map((t, i) => (
                     <SwiperSlide className={styles.swiperItem} key={i}>
                         <img src={t.src} alt={t.alt} />

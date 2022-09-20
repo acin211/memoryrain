@@ -19,7 +19,7 @@ const navOpen = (hamburger, sideNav) => {
         {
             top: "50%",
             y: "-50%",
-            ease: "power1.in",
+            ease: "power1.out",
             duration: 0.15,
         },
         "start"
@@ -29,7 +29,7 @@ const navOpen = (hamburger, sideNav) => {
             {
                 top: "-50%",
                 y: "50%",
-                ease: "power1.in",
+                ease: "power1.out",
                 duration: 0.15,
             },
             "start"
@@ -197,8 +197,12 @@ const Nav = () => {
     const hamburgerRef = useRef(null);
     const sideNavRef = useRef(null);
 
-    const handleNavOpen = () => {
-        setIsOpen((open) => !open);
+    const handleNavOpen = (setting) => {
+        if (typeof setting === "boolean") {
+            setIsOpen(setting);
+        } else {
+            setIsOpen((open) => !open);
+        }
     };
 
     useEffect(() => {
@@ -216,8 +220,13 @@ const Nav = () => {
             <nav className={styles.nav}>
                 <div className={classNames("width-setter", styles.container)}>
                     <Link href="/">
-                        <div className={styles.logo}></div>
+                        <div className={styles.logo} onClick={() => handleNavOpen(false)}></div>
                     </Link>
+                    <div className={classNames(styles.naviList, "pc-only")}>
+                        <Link href="/theme">
+                            <div className={styles.navItem}>Theme</div>
+                        </Link>
+                    </div>
                     <div className={classNames(styles.hamburger, "mobile-only")} onClick={handleNavOpen} ref={hamburgerRef}>
                         <span className={classNames(styles.line1, styles.line, "line-1")}></span>
                         <span className={classNames(styles.line2, styles.line, "line-2")}></span>
@@ -227,7 +236,15 @@ const Nav = () => {
             </nav>
             <div className={styles.sideNav} ref={sideNavRef}>
                 <div className={classNames(styles.dim, "dim")}></div>
-                <div className={classNames(styles.slide, "slide")}></div>
+                <div className={classNames(styles.slide, "slide")}>
+                    <div className={styles.itemContainer}>
+                        <Link href="/theme">
+                            <div className={styles.navItemM} onClick={() => handleNavOpen(false)}>
+                                Theme
+                            </div>
+                        </Link>
+                    </div>
+                </div>
             </div>
         </>
     );
