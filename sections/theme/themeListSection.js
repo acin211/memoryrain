@@ -130,9 +130,11 @@ const ThemeListSection = () => {
                                         <img src={infoRef.current.src} alt={infoRef.current.alt} />
                                     </div>
                                     <div className={styles.descriptionContainer}>{infoRef.current.description}</div>
-                                    <div className={styles.buttonContainer}>
-                                        <button>예약하기</button>
-                                    </div>
+                                    {infoRef.current.id !== -1 && (
+                                        <div className={styles.buttonContainer}>
+                                            <button>예약하기</button>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             <div className={classNames("pc-only", styles.pcContent)}>
@@ -141,9 +143,11 @@ const ThemeListSection = () => {
                                         <div className={styles.imageContainer}>
                                             <img src={infoRef.current.src} alt={infoRef.current.alt} />
                                         </div>
-                                        <div className={styles.buttonContainer}>
-                                            <button>예약하기</button>
-                                        </div>
+                                        {infoRef.current.id !== -1 && (
+                                            <div className={styles.buttonContainer}>
+                                                <button>예약하기</button>
+                                            </div>
+                                        )}
                                     </div>
                                     <div className={styles.descriptionContainer}>{infoRef.current.description}</div>
                                 </div>
@@ -154,7 +158,7 @@ const ThemeListSection = () => {
             </div>
             <div className={classNames(styles.container, "width-setter")}>
                 {theme.map((info) => (
-                    <div className={styles.themeItem} key={info.id} onClick={info.id !== -1 ? () => handleOpen(true, info) : () => null}>
+                    <div className={styles.themeItem} key={info.id} onClick={() => handleOpen(true, info)}>
                         <div className={styles.posterContainer}>
                             <img src={info.src} alt={info.alt} />
                         </div>

@@ -222,10 +222,15 @@ const Nav = () => {
                     <Link href="/">
                         <div className={styles.logo} onClick={() => handleNavOpen(false)}></div>
                     </Link>
-                    <div className={classNames(styles.naviList, "pc-only")}>
-                        <Link href="/theme">
-                            <div className={styles.navItem}>Theme</div>
-                        </Link>
+                    <div className={classNames("pc-only")}>
+                        <div className={classNames(styles.naviList)}>
+                            <Link href="/">
+                                <div className={styles.navItem}>Home</div>
+                            </Link>
+                            <Link href="/theme">
+                                <div className={styles.navItem}>Theme</div>
+                            </Link>
+                        </div>
                     </div>
                     <div className={classNames(styles.hamburger, "mobile-only")} onClick={handleNavOpen} ref={hamburgerRef}>
                         <span className={classNames(styles.line1, styles.line, "line-1")}></span>
@@ -238,6 +243,11 @@ const Nav = () => {
                 <div className={classNames(styles.dim, "dim")}></div>
                 <div className={classNames(styles.slide, "slide")}>
                     <div className={styles.itemContainer}>
+                        <Link href="/">
+                            <div className={styles.navItemM} onClick={() => handleNavOpen(false)}>
+                                Home
+                            </div>
+                        </Link>
                         <Link href="/theme">
                             <div className={styles.navItemM} onClick={() => handleNavOpen(false)}>
                                 Theme
