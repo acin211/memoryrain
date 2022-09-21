@@ -43,7 +43,7 @@ const FreeExperienceGroup = () => {
                 </div>
                 <div className={styles.btnApply}>
                     <button>
-                        <Link href="https://app.catchsecu.com/project/659a6dfe7e06a0a/form" target="_blank">
+                        <Link href="https://app.catchsecu.com/project/7c60196b2f083a8/form" target="_blank">
                             신청하기
                         </Link>
                     </button>

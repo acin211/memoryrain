@@ -3,8 +3,14 @@ const theme = [
         id: 0,
         src: "/images/poster-1.jpg",
         alt: "dejavue",
-        title: "데자뷰",
-        description: "꿈에서 본것만 같은 현실. 현실같은 꿈. 꿈과 현실의 경계에서 정답을 찾아라!",
+        title: "데자뷰 Dejavu",
+        description: (
+            <>
+                난이도: ★★★ / 장르: 스릴러 / 광안점
+                <br />
+                테마설명: 기억을 잃은 한 남자의 이야기 어디선가 본듯한 장면으로 채워지는 하루 그날 그에겐 무슨 일이 일어난걸까?"
+            </>
+        ),
     },
     {
         id: -1,
