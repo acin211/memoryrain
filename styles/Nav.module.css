@@ -85,13 +85,18 @@
   .navItem{
     cursor:pointer;
     color:#000;
-    transition: color 0.5s;
+    transition: color 0.3s;
 
     margin-left:1.2em;
   }
 
+  
   .navItem:hover{
     color:#5e5e5e;
+  }
+  
+  .navItem.active{
+    color:#C2A1D0;
   }
   
   .nav .line{

@@ -3,7 +3,7 @@ const theme = [
         id: 0,
         src: "/images/poster-1.jpg",
         alt: "dejavue",
-        title: "데자뷰 Dejavu",
+        title: "데자뷰 Dejavu(오픈예정)",
         description: (
             <>
                 난이도: ★★★ / 장르: 스릴러 / 광안점

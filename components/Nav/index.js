@@ -3,6 +3,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useRouter } from "next/router";
 
 const navOpen = (hamburger, sideNav) => {
     document.body.classList.add("no-scroll");
@@ -196,6 +197,7 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
     const hamburgerRef = useRef(null);
     const sideNavRef = useRef(null);
+    const router = useRouter();
 
     const handleNavOpen = (setting) => {
         if (typeof setting === "boolean") {
@@ -225,10 +227,10 @@ const Nav = () => {
                     <div className={classNames("pc-only")}>
                         <div className={classNames(styles.naviList)}>
                             <Link href="/">
-                                <div className={styles.navItem}>Home</div>
+                                <div className={classNames(styles.navItem, router.pathname === "/" && styles.active)}>Home</div>
                             </Link>
                             <Link href="/theme">
-                                <div className={styles.navItem}>Theme</div>
+                                <div className={classNames(styles.navItem, router.pathname === "/theme" && styles.active)}>Theme</div>
                             </Link>
                         </div>
                     </div>
