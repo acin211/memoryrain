@@ -9,12 +9,13 @@ const Layout = ({ children }) => {
                 <title>Memoryrain</title>
                 <meta name="language" content="ko" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="메모리레인 부산 광안리" />
-                <meta property="og:description" content="부산 야외 방탈출 카페, 광안리 방탈출 카페, 일상에 특별함을 뿌린 테마 게임" />
+                <meta property="og:title" content="메모리레인 부산 야외방탈출" />
+                <meta property="og:description" content="세상에 단 하나뿐인 이야기 속으로, 부산 야외 방탈출 카페 메모리레인" />
                 <meta property="og:url" content="http://www.memoryrain.kr" />
-                <meta name="description" content="부산 야외 방탈출 카페, 광안리 방탈출 카페, 일상에 특별함을 뿌린 테마 게임" />
-                <meta name="keywords" content="메모리레인 부산 광안리 프리미엄 롤플레잉 카페" />
+                <meta name="description" content="세상에 단 하나뿐인 이야기 속으로, 부산 야외 방탈출 카페 메모리레인" />
+                <meta name="keywords" content="메모리레인 MEMORYRAIN 방탈출카페 야외방탈출 부산방탈출 광안리방탈출 서면방탈출 경대방탈출" />
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="naver-site-verification" content="69448b23a1271e9acf5e2a6095cf52d5748cd12d" />
             </Head>
             <Nav />
             <main style={{ minHeight: "calc(100vh - 240px)" }}>{children}</main>
