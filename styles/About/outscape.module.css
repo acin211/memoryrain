@@ -1,0 +1,33 @@
+.container{
+    margin-top:65px;
+}
+
+.figure{
+    width:100%;
+    aspect-ratio:2 / 1;
+
+    position:relative;
+}
+
+.figure .dim{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.figure .bg{
+    width:100%;
+    height:100%;
+
+    background-image:url(/images/about-2.jpg);
+    background-size:cover;
+    background-position: center bottom;
+}
+
+@media screen and (min-width:768px){
+    .figure{
+        max-height: 500px;
+    }
+}

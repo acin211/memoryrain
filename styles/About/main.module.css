@@ -1,0 +1,42 @@
+.textContainer{
+    margin-top:35px;
+}
+
+.title{
+    font-size:24px;
+    font-family: 'Roboto';
+    font-weight:400;
+}
+
+.body{
+    margin-top:15px;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.body .paragraph{
+    margin-bottom:1em;
+}
+
+.body .paragraph:nth-last-child(1){
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .textContainer{
+        width:85%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:80px;
+    }
+
+    .title{
+        font-size:3.6vw;
+        /* font-weight:300; */
+    }
+    
+    .body{
+        font-size:16px;
+        margin-top:30px;
+    }
+}

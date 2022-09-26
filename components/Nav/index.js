@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useRouter } from "next/router";
+import navi from "../../data/navi";
 
 const navOpen = (hamburger, sideNav) => {
     document.body.classList.add("no-scroll");
@@ -226,12 +227,11 @@ const Nav = () => {
                     </Link>
                     <div className={classNames("pc-only")}>
                         <div className={classNames(styles.naviList)}>
-                            <Link href="/">
-                                <div className={classNames(styles.navItem, router.pathname === "/" && styles.active)}>Home</div>
-                            </Link>
-                            <Link href="/theme">
-                                <div className={classNames(styles.navItem, router.pathname === "/theme" && styles.active)}>Theme</div>
-                            </Link>
+                            {navi.map((n) => (
+                                <Link href={n.href} key={n.id}>
+                                    <div className={classNames(styles.navItem, router.pathname === n.href && styles.active)}>{n.title}</div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                     <div className={classNames(styles.hamburger, "mobile-only")} onClick={handleNavOpen} ref={hamburgerRef}>
@@ -245,16 +245,13 @@ const Nav = () => {
                 <div className={classNames(styles.dim, "dim")}></div>
                 <div className={classNames(styles.slide, "slide")}>
                     <div className={styles.itemContainer}>
-                        <Link href="/">
-                            <div className={styles.navItemM} onClick={() => handleNavOpen(false)}>
-                                Home
-                            </div>
-                        </Link>
-                        <Link href="/theme">
-                            <div className={styles.navItemM} onClick={() => handleNavOpen(false)}>
-                                Theme
-                            </div>
-                        </Link>
+                        {navi.map((n) => (
+                            <Link href={n.href} key={n.id}>
+                                <div className={styles.navItemM} onClick={() => handleNavOpen(false)}>
+                                    {n.title}
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
