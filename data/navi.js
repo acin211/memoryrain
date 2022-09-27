@@ -11,8 +11,13 @@ const navi = [
     },
     {
         id: 2,
-        title: "About",
+        title: "About Us",
         href: "/about",
+    },
+    {
+        id: 3,
+        title: "Board",
+        href: "/board",
     },
 ];
 

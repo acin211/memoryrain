@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
                 <meta name="naver-site-verification" content="69448b23a1271e9acf5e2a6095cf52d5748cd12d" />
             </Head>
             <Nav />
-            <main style={{ minHeight: "calc(100vh - 240px)" }}>{children}</main>
+            <main style={{ minHeight: "calc(100vh - 320px)" }}>{children}</main>
             <Footer />
         </>
     );

@@ -1,5 +1,11 @@
+import MainBoard from "../../sections/board/main";
+
 const Board = () => {
-    return <>board</>;
+    return (
+        <>
+            <MainBoard />
+        </>
+    );
 };
 
 export default Board;

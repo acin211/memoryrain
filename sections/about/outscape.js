@@ -4,12 +4,12 @@ import topStyle from "../../styles/About/main.module.css";
 
 const OutScape = () => {
     return (
-        <div className={styles.container}>
-            <div className={styles.figure}>
+        <div className={classNames(styles.container, topStyle.containers, "width-setter")}>
+            <div className={classNames(styles.figure, topStyle.image)}>
                 <div className={styles.dim}></div>
                 <div className={styles.bg}></div>
             </div>
-            <div className={classNames("width-setter", topStyle.textContainer)}>
+            <div className={classNames(topStyle.textContainer)}>
                 <div className={topStyle.title}>
                     야외방탈출이란?
                     <br />

@@ -4,12 +4,12 @@ import topStyle from "../../styles/About/main.module.css";
 
 const MemoryRain = () => {
     return (
-        <div>
-            <div className={styles.figure}>
+        <div className={classNames(topStyle.containers, "width-setter")}>
+            <div className={classNames(styles.figure, topStyle.image)}>
                 <div className={styles.dim}></div>
                 <div className={styles.bg}></div>
             </div>
-            <div className={classNames("width-setter", topStyle.textContainer)}>
+            <div className={classNames(topStyle.textContainer)}>
                 <div className={topStyle.title}>About Memory Rain</div>
                 <div className={topStyle.body}>
                     <div className={topStyle.paragraph}>

@@ -1,0 +1,39 @@
+.container{
+    margin-top:150px;
+    font-family:'Noto Sans KR', sans-serif;
+}
+
+.boardHead{
+    font-size:24px;
+    font-weight:400;
+    font-family:'Noto Sans KR', sans-serif;
+}
+
+.boardItemContainer{
+    margin-top:25px;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+
+.boardItem{
+    padding:0 15px;
+    display:grid;
+    grid-template-columns:1.5em 1fr;
+    
+    letter-spacing: 0.03em;
+    border-bottom:1px solid #ddd;
+}
+
+.boardIndex{
+    padding-right:15px;
+    border-right:1px solid #ddd;
+    padding:10px 15px 10px 0;
+}
+
+.boardTitle{
+    padding:10px;
+}
+
+.boardItem:nth-last-child(1){
+    border:none;
+}
